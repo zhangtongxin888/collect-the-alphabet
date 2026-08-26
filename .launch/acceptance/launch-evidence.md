@@ -23,3 +23,9 @@ Status: in progress. DNS, TLS and Google Search Console evidence must be complet
 | GSC Domain Property | Pending | `sc-domain:collectthealphabetrolbox.wiki` |
 | GSC Sitemap | Pending | `https://collectthealphabetrolbox.wiki/sitemap.xml` exact status must be Success |
 | Homepage indexing request | Pending | Request once; request is not proof of indexing |
+
+## Operational blocker
+
+- At 2026-08-26 20:36:04 Asia/Shanghai, the only authorized Chrome connection attempt timed out while claiming the existing Spaceship Advanced DNS tab.
+- No DNS or Google Search Console state changed in that attempt, and the shared browser lock was released immediately.
+- Recovery requires the target domain's Spaceship Advanced DNS tab to be foregrounded and a new coordinator authorization before any further browser action.
