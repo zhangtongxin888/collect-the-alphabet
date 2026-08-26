@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "run_id": "collect-the-alphabet-20260826-codex-v1",
+  "game": {
+    "official_name": "Collect The Alphabet",
+    "domain": "collectthealphabetrolbox.wiki"
+  },
+  "provider": {
+    "name": "Kimi",
+    "model": "kimi-code/k3",
+    "generated_at": "2026-08-26T11:28:58Z"
+  },
+  "research_approval_sha256": "8cb5b6a3851f6e902ccedcb96543fd378b3b425a577b97393ae8afc4bff70235",
+  "status": "ready_for_review",
+  "design_system": {
+    "theme": "Premium playful alphabet workbench: dark ink background with warm paper panels, colorful letter tiles with hard offset shadows, angular slanted section joins, serif display type against a sans body, strong contrast, restrained motion (single staggered tile entrance and subtle hover lifts, both disabled under prefers-reduced-motion). Deliberately avoids generic template card grids in favor of editorial split columns, numbered step rails, vertical flow badges, and staggered tile trays.",
+    "palette": {
+      "bg": "#17130d (ink), raised ink #231c12, ink line #3a2f1e",
+      "surface": "#f4ead3 (warm paper), deeper paper #e9d8b8",
+      "text": "#f2e7cf on ink / #261d10 on paper; dim variants #c9b894 / #5c4c32",
+      "accent": "#f0a13a amber (accent-ink #b06f12 on paper); tile colors coral #e8604c, amber #f0a13a, teal #2f9c8c, violet #8b63c9, leaf #7ba23f, blue #4a80b4"
+    },
+    "font_strategy": "System-only stacks, zero downloaded fonts: display Iowan Old Style/Palatino/Georgia serif for headlines, tiles and numerals; ui-sans-serif system stack for body; ui-monospace stack for eyebrows, table headers, codes and badges.",
+    "spacing_scale": ["0.25rem", "0.5rem", "0.75rem", "1rem", "1.5rem", "2rem", "3rem", "4.5rem", "6rem"],
+    "responsive_rules": [
+      "Base (<=479px, covers 375): single column, hero stacks text over tray, CTAs full-width, nav wraps, tables scroll inside .table-scroll, flow badges stay vertical, lanes drop the arrow",
+      "48rem and up (covers 768): hero 7fr/5fr text-tray grid, editorial .split 5fr/7fr with sticky intro column, even steps indented by 3rem, guide lanes go two-up, footer three columns",
+      "90rem and up (covers 1440): content capped at 70rem max-width with wider gutters; no full-bleed stretch",
+      "All widths: overflow-x clip on html/body, verified no horizontal overflow at 375, 768, 1440 on all six routes",
+      "prefers-reduced-motion: reduce disables scroll-behavior smoothness, all animations and transitions; no-preference gate enables tile entrance and hover lifts only",
+      "Keyboard: visible :focus-visible 3px amber outline on all interactive elements; skip link becomes visible on first Tab"
+    ]
+  },
+  "homepage": {
+    "hero": {
+      "headline": "Collect every letter. A to Z.",
+      "subheadline": "Collect The Alphabet is a Roblox collector by Cosmic Collection where you open letter packs, mount letters on your board, and earn Money every second — all the way from A through Z. This wiki walks you from your first pack to a full alphabet.",
+      "primary_cta": {
+        "label": "Start the Beginner Guide",
+        "target": "/beginner-guide"
+      },
+      "secondary_cta": {
+        "label": "Official game on Roblox",
+        "target": "https://www.roblox.com/games/127103413498148/Collect-The-Alphabet",
+        "note": "Clearly labeled secondary external link; opens in a new tab. The largest, visually dominant CTA is the internal Beginner Guide button."
+      }
+    },
+    "sections": [
+      "Quick start — four numbered steps from first pack to first Money collection, linking to /beginner-guide",
+      "Core gameplay loop — Buy/Place/Open/Earn flow with letter-tile strip, linking to /gameplay-loop",
+      "Progression route — Word of the Day wall teaser and nine-symbol row, linking to /progression-guide",
+      "All guides — numbered link lanes to /beginner-guide, /gameplay-loop, /progression-guide, /common-mistakes, /faq"
+    ]
+  },
+  "page_map": [
+    {
+      "path": "/",
+      "purpose": "Home: hero with largest CTA 'Start the Beginner Guide' -> /beginner-guide, quick start, core loop preview, progression teaser, guide lanes, labeled secondary official Roblox link"
+    },
+    {
+      "path": "/beginner-guide",
+      "purpose": "Quick start / first session walkthrough: buy first pack, place on plot pads, wait for READY, carry letters to DROP OFF LETTERS, collect Money, handle duplicates"
+    },
+    {
+      "path": "/gameplay-loop",
+      "purpose": "Core gameplay loop: six-station main loop, duplicates-to-Diamonds sell loop, Word of the Day side loop, Symbol Pack late-game loop"
+    },
+    {
+      "path": "/progression-guide",
+      "purpose": "Progression route: Money vs Diamond roles, four upgrade fields (Money Multiplier, Pack Rarity, Pack Time, Pack Amount), nine-symbol collection, daily rewards, group reward, offline hatching"
+    },
+    {
+      "path": "/common-mistakes",
+      "purpose": "Common errors with fixes: keep-or-sell traps around Word of the Day, variable sell values, empty pack slots, missed E interactions, frozen popups, code casing, empty Sell panel"
+    },
+    {
+      "path": "/faq",
+      "purpose": "FAQ & codes: redemption steps (Settings > Codes > Enter Code > Submit), date-checked code 100KMEMBERS, game passes listed at check time, currencies, group reward, update cadence, official-game link section"
+    }
+  ],
+  "components": [
+    "Header (sticky, brand mark tile, wrapping nav with aria-current)",
+    "Footer (site links, labeled official-game external link, unofficial-fan disclaimer)",
+    "LetterTile (pure CSS letter/symbol tile, role=img with aria-label)",
+    "Slant (inline SVG angular section join, aria-hidden)",
+    "PageHero (inner-page eyebrow/title/lede band)",
+    "Steps (numbered step rail with serif numerals)",
+    "Flow (vertical-badge process list for the core loop)",
+    "Lane (angular internal-link rows with index and arrow)",
+    "FAQ details/summary items (native, keyboard accessible)",
+    "TierTable (scroll-contained tables for currencies and upgrades)",
+    "CodeChip (monospace dashed code token)",
+    "Skip link, focus-visible outlines, reduced-motion media queries"
+  ],
+  "assets": [
+    {
+      "path": "src/app/icon.svg",
+      "type": "inline SVG favicon (ink square, coral letter tile with letter A)",
+      "source": "original, created for this site",
+      "license": "original work, no third-party assets"
+    },
+    {
+      "path": "src/components/Slant.tsx",
+      "type": "inline SVG polygon section joins",
+      "source": "original, created for this site",
+      "license": "original work, no third-party assets"
+    },
+    {
+      "note": "No raster images, no downloaded fonts, no third-party media anywhere in the site; all visuals are original CSS and inline SVG geometry."
+    }
+  ],
+  "approved_fact_ids_used": [
+    "fact-001", "fact-005", "fact-015", "fact-016", "fact-017", "fact-018", "fact-019", "fact-020", "fact-021", "fact-022",
+    "fact-023", "fact-024", "fact-025", "fact-026", "fact-027", "fact-028", "fact-029", "fact-035", "fact-036", "fact-041",
+    "fact-042", "fact-043", "fact-044", "fact-045", "fact-046", "fact-047", "fact-048", "fact-049", "fact-050", "fact-051",
+    "fact-052", "fact-053", "fact-054", "fact-055", "fact-056", "fact-057", "fact-058", "fact-059", "fact-060", "fact-061",
+    "fact-062", "fact-063", "fact-064", "fact-065", "fact-066", "fact-067", "fact-068", "fact-069", "fact-070", "fact-071",
+    "fact-072", "fact-073", "fact-074", "fact-075", "fact-076", "fact-077", "fact-078", "fact-079", "fact-080", "fact-081",
+    "fact-082", "fact-083", "fact-084", "fact-085", "fact-086", "fact-087", "fact-088", "fact-089", "fact-090", "fact-091",
+    "fact-092", "fact-093", "fact-094", "fact-095", "fact-096", "fact-097", "fact-098", "fact-099", "fact-100", "fact-101",
+    "fact-102", "fact-103", "fact-104", "fact-108", "fact-110", "fact-111", "fact-112", "fact-113", "fact-114", "fact-115",
+    "fact-116", "fact-117", "fact-118", "fact-119", "fact-120", "fact-121", "fact-122", "fact-123", "fact-124", "fact-125"
+  ],
+  "files_changed": [
+    "package.json",
+    "package-lock.json",
+    "tsconfig.json",
+    "next.config.mjs",
+    "eslint.config.mjs",
+    "next-env.d.ts",
+    "src/lib/site.ts",
+    "src/app/layout.tsx",
+    "src/app/globals.css",
+    "src/app/page.tsx",
+    "src/app/icon.svg",
+    "src/app/robots.ts",
+    "src/app/sitemap.ts",
+    "src/app/beginner-guide/page.tsx",
+    "src/app/gameplay-loop/page.tsx",
+    "src/app/progression-guide/page.tsx",
+    "src/app/common-mistakes/page.tsx",
+    "src/app/faq/page.tsx",
+    "src/components/Header.tsx",
+    "src/components/Footer.tsx",
+    "src/components/LetterTile.tsx",
+    "src/components/PageHero.tsx",
+    "src/components/Slant.tsx",
+    ".launch/design/kimi-design-v1.json"
+  ],
+  "preview_command": "npm install && npm run build && npm start",
+  "verification": {
+    "lint": "eslint . — 0 errors, 0 warnings",
+    "build": "next build — success, all 6 routes plus robots.txt and sitemap.xml prerendered as static content",
+    "rendered_widths": [375, 768, 1440],
+    "render_checks": "Rendered locally via production server (next start) and a Playwright-driven browser: no horizontal overflow on all 6 routes at 375px; homepage visually verified at 375, 768, 1440; progression guide visually verified at 768; keyboard focus verified (first Tab focuses the skip link with a 3px solid amber outline)",
+    "not_verified": "No device-lab or cross-browser matrix testing; checks were a single Chromium-based Playwright instance against the local production build."
+  },
+  "notes": [
+    "All 100 used fact IDs are within the approved 125; none of the rejected fact-126..fact-135 appear anywhere.",
+    "Dynamic values are date-scoped in copy: starting balance/first-pack price (August 19, 2026 snapshot), Common Symbol Pack price and timer (August 25, 2026 snapshot), Word of the Day examples (dated, with explicit rotation warning), code 100KMEMBERS (verified 2026-08-26), game pass lineup (API check 2026-08-26), daily reward contents (version-scoped), 9-pack cap (upgraded-session observation).",
+    "No competitor URLs or competitor wording; the only external link is the official Roblox game page, always labeled as external and secondary to the internal Beginner Guide CTA.",
+    "No git initialization, no remotes, no credentials, no deployment, no DNS changes performed."
+  ]
+}

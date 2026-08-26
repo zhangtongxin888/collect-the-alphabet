@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "run_id": "collect-the-alphabet-20260826-codex-v1",
+  "game": {
+    "official_name": "Collect The Alphabet",
+    "domain": "collectthealphabetrolbox.wiki"
+  },
+  "reviewed_by": "Codex",
+  "reviewed_at": "2026-08-26T18:58:00+08:00",
+  "approved_fact_ids": [
+    "fact-001","fact-002","fact-003","fact-004","fact-005","fact-006","fact-007","fact-008","fact-009","fact-010",
+    "fact-011","fact-012","fact-013","fact-014","fact-015","fact-016","fact-017","fact-018","fact-019","fact-020",
+    "fact-021","fact-022","fact-023","fact-024","fact-025","fact-026","fact-027","fact-028","fact-029","fact-030",
+    "fact-031","fact-032","fact-033","fact-034","fact-035","fact-036","fact-037","fact-038","fact-039","fact-040",
+    "fact-041","fact-042","fact-043","fact-044","fact-045","fact-046","fact-047","fact-048","fact-049","fact-050",
+    "fact-051","fact-052","fact-053","fact-054","fact-055","fact-056","fact-057","fact-058","fact-059","fact-060",
+    "fact-061","fact-062","fact-063","fact-064","fact-065","fact-066","fact-067","fact-068","fact-069","fact-070",
+    "fact-071","fact-072","fact-073","fact-074","fact-075","fact-076","fact-077","fact-078","fact-079","fact-080",
+    "fact-081","fact-082","fact-083","fact-084","fact-085","fact-086","fact-087","fact-088","fact-089","fact-090",
+    "fact-091","fact-092","fact-093","fact-094","fact-095","fact-096","fact-097","fact-098","fact-099","fact-100",
+    "fact-101","fact-102","fact-103","fact-104","fact-105","fact-106","fact-107","fact-108","fact-109","fact-110",
+    "fact-111","fact-112","fact-113","fact-114","fact-115","fact-116","fact-117","fact-118","fact-119","fact-120",
+    "fact-121","fact-122","fact-123","fact-124","fact-125"
+  ],
+  "rejected_facts": [
+    {"id":"fact-126","reason":"Crawler placeholder conflicts with official APIs and active gameplay evidence."},
+    {"id":"fact-127","reason":"Not consistently present in current code sources and no successful redemption evidence."},
+    {"id":"fact-128","reason":"Narrator expectation without success feedback is not verification."},
+    {"id":"fact-129","reason":"No visible redemption success or reliable current cross-check."},
+    {"id":"fact-130","reason":"Conflicts with the verified pack-based collection loop and appears to describe another game pattern."},
+    {"id":"fact-131","reason":"Official creator identity is Cosmic Collection, not Toybox Studios."},
+    {"id":"fact-132","reason":"Wrong-game code with no exact-place support."},
+    {"id":"fact-133","reason":"The word rotates; KOALA is only a dated example."},
+    {"id":"fact-134","reason":"Single secondary claim contradicted by mutable Pack Time state and not freshly verified."},
+    {"id":"fact-135","reason":"Absence of observed combat does not prove the absence of all failure or reset conditions."}
+  ],
+  "fact_gate": {
+    "approved_total": 125,
+    "structural_metadata_count": 14,
+    "player_useful_core_count": 111,
+    "minimum_required": 100,
+    "duplicate_ids": 0,
+    "public_https_sources_only": true,
+    "design_may_resume": true
+  },
+  "design_eligible_stable_fact_ids": [
+    "fact-001","fact-003","fact-005","fact-015","fact-016","fact-017","fact-018","fact-019","fact-020","fact-021",
+    "fact-022","fact-023","fact-024","fact-025","fact-026","fact-028","fact-029","fact-035","fact-036","fact-041",
+    "fact-044","fact-045","fact-046","fact-047","fact-048","fact-049","fact-050","fact-051","fact-052","fact-053",
+    "fact-054","fact-055","fact-056","fact-057","fact-058","fact-059","fact-060","fact-061","fact-062","fact-064",
+    "fact-065","fact-066","fact-067","fact-068","fact-069","fact-070","fact-071","fact-072","fact-073","fact-074",
+    "fact-075","fact-076","fact-077","fact-078","fact-079","fact-080","fact-081","fact-082","fact-083","fact-084",
+    "fact-085","fact-086","fact-087","fact-088","fact-089","fact-091","fact-092","fact-093","fact-094","fact-096",
+    "fact-097","fact-099","fact-100","fact-101","fact-102","fact-103","fact-104","fact-108","fact-110","fact-111",
+    "fact-112","fact-113","fact-114","fact-115","fact-116","fact-117","fact-118","fact-119","fact-120","fact-121",
+    "fact-122","fact-123","fact-124","fact-125"
+  ],
+  "notes": [
+    "Grok supplied zero approved facts; the approved research is a clearly attributed Codex fallback.",
+    "All prices, probabilities, timers, incomes, sale values, reward contents, displayed words, and code status must remain date-scoped or be omitted from stable site copy.",
+    "Competitor summaries were used only to discover source leads and rejected conflicts; no competitor text is approved for copying.",
+    "Design may use only approved IDs, with the stable allowlist preferred for player-facing evergreen copy."
+  ]
+}

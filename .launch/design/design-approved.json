@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "run_id": "collect-the-alphabet-20260826-codex-v1",
+  "reviewed_by": "Codex",
+  "reviewed_at": "2026-08-26T19:48:00+08:00",
+  "candidate_provider": {
+    "name": "Kimi",
+    "model": "kimi-code/k3"
+  },
+  "formal_code_provider": {
+    "name": "Codex",
+    "model": "gpt-5.6-sol"
+  },
+  "design_package": {
+    "path": ".launch/design/kimi-design-v1.json",
+    "sha256": "cd13d9e3415719ad1b6f52d98d0f63b7e52b3acab2d2ede5d3582664b670a79c",
+    "handoff_validator": "passed"
+  },
+  "fact_review": {
+    "result": "passed",
+    "approved_fact_ids_used": 100,
+    "stable_allowlist_ids_used": 93,
+    "date_scoped_ids_used": 7,
+    "unapproved_fact_ids_used": 0,
+    "rejected_fact_ids_used": 0,
+    "source_comments_match_design_manifest": true,
+    "competitor_references_in_player_copy": 0
+  },
+  "responsive_review": {
+    "375": {
+      "result": "passed",
+      "horizontal_overflow": false,
+      "primary_cta_area_px2": 20831,
+      "secondary_cta_area_px2": 13078
+    },
+    "768": {
+      "result": "passed",
+      "horizontal_overflow": false,
+      "primary_cta_area_px2": 18469,
+      "secondary_cta_area_px2": 13078
+    },
+    "1440": {
+      "result": "passed",
+      "horizontal_overflow": false,
+      "primary_cta_area_px2": 22474,
+      "secondary_cta_area_px2": 13078
+    },
+    "all_six_routes_at_375": "passed",
+    "primary_cta": {
+      "label": "Start the Beginner Guide",
+      "target": "/beginner-guide",
+      "click_result": "/beginner-guide",
+      "unique_largest_at_all_tested_widths": true
+    },
+    "keyboard_focus": "passed; first Tab exposes the skip link with a 3px visible outline"
+  },
+  "asset_review": {
+    "result": "passed",
+    "third_party_images": 0,
+    "downloaded_fonts": 0,
+    "original_assets": [
+      "src/app/icon.svg",
+      "src/components/Slant.tsx",
+      "src/app/globals.css"
+    ]
+  },
+  "issues_and_resolutions": [
+    {
+      "issue": "The Kimi ESLint configuration scanned generated .next output when lint ran after build.",
+      "resolution": "Codex replaced the compatibility configuration with the native Next.js flat configuration and global generated-file ignores; build-then-lint now passes."
+    },
+    {
+      "issue": "The Kimi dependency set used Next.js 15.5.2, which failed the production dependency security audit.",
+      "resolution": "Codex upgraded Next.js to 16.3.3 and React to 19.2.8; the production dependency audit now reports zero vulnerabilities."
+    },
+    {
+      "issue": "At 375px the internal and external hero actions initially shared the same width.",
+      "resolution": "Codex reduced the mobile external action to a secondary intrinsic width; the internal beginner-guide action is now uniquely largest at 375, 768 and 1440."
+    },
+    {
+      "issue": "Kimi created transient node_modules, .next and local screenshot artifacts during candidate verification.",
+      "resolution": "Codex integrated only approved source, configuration and design files; transient candidate artifacts were not copied to the formal repository."
+    }
+  ],
+  "verification": {
+    "lint": "passed before and after production build",
+    "typecheck": "passed",
+    "tests": "5 passed, 0 failed",
+    "production_build": "passed; all six routes plus robots.txt and sitemap.xml are static",
+    "production_dependency_audit": "0 vulnerabilities"
+  },
+  "result": "approved"
+}

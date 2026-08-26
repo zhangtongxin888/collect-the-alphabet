@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "run_id": "collect-the-alphabet-20260826-codex-v1",
+  "game": {
+    "official_name": "Collect The Alphabet",
+    "roblox_url": "https://www.roblox.com/games/127103413498148/Collect-The-Alphabet",
+    "place_id": "127103413498148",
+    "universe_id": "10583634958",
+    "developer": "Cosmic Collection",
+    "developer_group_id": "659075385"
+  },
+  "domain": "collectthealphabetrolbox.wiki",
+  "repository": "https://github.com/zhangtongxin888/collect-the-alphabet",
+  "workspace_policy": "dedicated-repository-only",
+  "candidate_workspace_ref": "external-project:candidates/kimi-v1",
+  "allowed_kimi_paths": [
+    "src/**",
+    "public/**",
+    "package.json",
+    "package-lock.json",
+    "next.config.*",
+    "tsconfig.json",
+    "next-env.d.ts",
+    "eslint.config.*",
+    "postcss.config.*",
+    ".launch/design/kimi-design-v1.json"
+  ],
+  "target_hosting": "Vercel",
+  "providers": {
+    "research_primary": "Grok CLI through run_grok.sh",
+    "research_fallback": "Codex",
+    "design_primary": "Kimi kimi-code/k3",
+    "design_fallback": "Sites then Codex",
+    "formal_code": "Codex"
+  },
+  "gates": {
+    "minimum_approved_facts": 100,
+    "largest_hero_cta": "internal beginner guide",
+    "browser_dns_deploy_gsc_allowed": false,
+    "current_stage": "formal_code_complete_waiting_release"
+  }
+}

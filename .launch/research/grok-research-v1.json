@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "run_id": "collect-the-alphabet-20260826-grok-v1",
+  "game": {
+    "official_name": "Collect The Alphabet",
+    "domain": "collectthealphabetrolbox.wiki",
+    "roblox_url": "https://www.roblox.com/games/127103413498148/Collect-The-Alphabet",
+    "place_id": "127103413498148",
+    "universe_id": "10583634958",
+    "developer": "Cosmic Collection"
+  },
+  "provider": {
+    "name": "Grok",
+    "model": "grok-cli-1.0.5-model-unreported",
+    "generated_at": "2026-08-26T18:30:54+08:00"
+  },
+  "status": "failed",
+  "facts": [],
+  "attempts": [
+    {
+      "attempt": 1,
+      "max_turns": 4,
+      "result": "max_turns_reached_before_json",
+      "approved_candidates": 0
+    },
+    {
+      "attempt": 2,
+      "max_turns": 12,
+      "result": "exit_zero_but_required_json_missing",
+      "approved_candidates": 0
+    }
+  ],
+  "batch_report": {
+    "new_candidate_count": 0,
+    "duplicate_or_rejected_count": 0,
+    "estimated_core_eligible_count": 0,
+    "remaining_core_gap": 100,
+    "source_distribution": {},
+    "next_batch_targets": [
+      "exact Roblox identity",
+      "visible gameplay actions with timestamps",
+      "current code success evidence"
+    ]
+  },
+  "fallback": {
+    "provider": "Codex",
+    "reason": "The single allowed correction retry still did not return the required JSON schema."
+  }
+}
