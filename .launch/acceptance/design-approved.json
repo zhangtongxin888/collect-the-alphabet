@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "run_id": "collect-the-alphabet-20260826-codex-v1",
+  "reviewed_by": "Codex",
+  "reviewed_at": "2026-08-26T19:48:00+08:00",
+  "source": ".launch/design/design-approved.json",
+  "candidate_provider": {
+    "name": "Kimi",
+    "model": "kimi-code/k3"
+  },
+  "formal_code_provider": {
+    "name": "Codex",
+    "model": "gpt-5.6-sol"
+  },
+  "design_package": {
+    "path": ".launch/design/kimi-design-v1.json",
+    "sha256": "cd13d9e3415719ad1b6f52d98d0f63b7e52b3acab2d2ede5d3582664b670a79c",
+    "handoff_validator": "passed"
+  },
+  "fact_review": {
+    "result": "passed",
+    "approved_fact_ids_used": 100,
+    "stable_allowlist_ids_used": 93,
+    "date_scoped_ids_used": 7,
+    "unapproved_fact_ids_used": 0,
+    "rejected_fact_ids_used": 0
+  },
+  "responsive_review": {
+    "375": {
+      "result": "passed",
+      "horizontal_overflow": false,
+      "primary_cta_area_px2": 20831,
+      "secondary_cta_area_px2": 13078
+    },
+    "768": {
+      "result": "passed",
+      "horizontal_overflow": false,
+      "primary_cta_area_px2": 18469,
+      "secondary_cta_area_px2": 13078
+    },
+    "1440": {
+      "result": "passed",
+      "horizontal_overflow": false,
+      "primary_cta_area_px2": 22474,
+      "secondary_cta_area_px2": 13078
+    },
+    "all_six_routes_at_375": "passed",
+    "primary_cta": {
+      "label": "Start the Beginner Guide",
+      "target": "/beginner-guide",
+      "unique_largest_at_all_tested_widths": true
+    },
+    "keyboard_focus": "passed"
+  },
+  "asset_review": {
+    "result": "passed",
+    "third_party_images": 0,
+    "downloaded_fonts": 0,
+    "license_status": "original CSS and inline SVG only"
+  },
+  "verification": {
+    "lint": "passed before and after production build",
+    "typecheck": "passed",
+    "tests": "5 passed, 0 failed",
+    "production_build": "passed",
+    "production_dependency_audit": "0 vulnerabilities"
+  },
+  "result": "approved"
+}
