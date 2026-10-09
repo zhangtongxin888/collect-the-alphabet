@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { navLinks, site } from "@/lib/site";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return navLinks.map((link) => ({
     url: `${site.baseUrl}${link.href === "/" ? "" : link.href}`,
