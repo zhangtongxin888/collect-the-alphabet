@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { site } from "@/lib/site";
+import { AdsterraSlot } from "../components/AdsterraSlot";
+import { AdsterraRuntime } from "../components/AdsterraRuntime";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.baseUrl),
@@ -50,8 +52,9 @@ export default function RootLayout({
           Skip to content
         </a>
         <Header />
-        <main id="main">{children}</main>
+        <main id="main"><AdsterraSlot id="top" />{children}<AdsterraSlot id="mid" /></main>
         <Footer />
+        <AdsterraSlot id="bottom" /><AdsterraRuntime />
       </body>
     </html>
   );
